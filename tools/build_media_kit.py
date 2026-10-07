@@ -321,7 +321,7 @@ def story_announce(size, name):
     bw = w - 120
     framed(img, pic, (60, y + 80, 60 + bw, y + 80 + bw * 9 // 16))
     y2 = y + 80 + bw * 9 // 16 + 110
-    block(d, (60, y2), "2 to 4 players. Online, on your network, or one mouse on the couch.", 48, w - 120, center=True)
+    block(d, (60, y2), "2 to 6 players. Online, on your network, or one mouse on the couch.", 48, w - 120, center=True)
     tag(img, (w // 2, h - 200), "COMING SOON TO STEAM", 32, GOLD, center=True)
     img.convert("RGB").save(os.path.join(OUT, name))
 

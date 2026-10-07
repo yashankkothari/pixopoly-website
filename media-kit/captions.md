@@ -13,7 +13,7 @@ Things we always say the same way:
 
 **Instagram (150 characters)**
 Buy the world. Bankrupt your friends.
-A pixel-art property trading game for 2 to 4 players.
+A pixel-art property trading game for 2 to 6 players.
 Coming soon to Steam.
 
 **X (160 characters)**
@@ -31,7 +31,7 @@ Each has an Instagram caption and a shorter one for X. Pictures are in `instagra
 **Instagram**
 Forty tiles. Two dice. Zero mercy.
 
-Pixopoly is a pixel-art property trading game for 2 to 4 players: online, on your network, or one mouse passed around the couch.
+Pixopoly is a pixel-art property trading game for 2 to 6 players: online, on your network, or one mouse passed around the couch.
 
 Coming soon to Steam. The free prototype is playable now (link in bio).
 
