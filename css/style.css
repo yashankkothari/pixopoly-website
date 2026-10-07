@@ -77,7 +77,8 @@ p { font-size: 16px; max-width: 46ch; }
 .btn.sm { font-size: 16px; padding: 10px 16px 12px; box-shadow: 0 0 0 4px var(--ink), inset 0 4px 0 var(--l), inset 0 -4px 0 var(--d), 0 8px 0 0 var(--d), 0 8px 0 4px var(--ink); }
 .btn.big { padding: 18px 34px 20px; }
 .btn.is-soon { --c: #5a4636; --d: #33261c; --l: #7a6350; cursor: default; }
-.btn.is-soon:hover, .btn.is-soon:active { transform: none; filter: none; }
+.btn.is-soon { transition: none; }
+.btn.is-soon:hover, .btn.is-soon:active { transform: none; filter: none; box-shadow: 0 0 0 4px var(--ink), inset 0 4px 0 var(--l), inset 0 -4px 0 var(--d), 0 12px 0 0 var(--d), 0 12px 0 4px var(--ink); }
 .btn.pop::after {              /* the gold frame that bursts out on a press, like in the game */
   content: ""; position: absolute; inset: 0; border: 4px solid var(--gold); pointer-events: none;
   animation: burst .25s ease-out forwards;
@@ -140,6 +141,7 @@ p { font-size: 16px; max-width: 46ch; }
 /* ── The three beats ── */
 .beat, .tables, .together, .gallery, .final { width: min(100% - 40px, var(--wrap)); margin: 0 auto; padding: 80px 0; }
 .beat { display: grid; gap: 40px; align-items: center; }
+.beat > * { min-width: 0; }
 @media (min-width: 900px) { .beat { grid-template-columns: 1fr 1fr; gap: 56px; padding: 110px 0; } .beat.flip > .copy { order: 2; } }
 .copy { display: grid; gap: 18px; justify-items: start; }
 .copy.center { justify-items: center; }
@@ -155,7 +157,8 @@ p { font-size: 16px; max-width: 46ch; }
 .shot.wide { max-width: 1040px; margin: 34px auto 0; }
 
 /* Ability cards fanned out, with the chaos stamp over them. */
-.cards { position: relative; display: flex; justify-content: center; padding: 30px 0 60px; min-height: 300px; }
+.cards { position: relative; display: flex; justify-content: center; padding: 30px 0 60px; min-height: 300px; overflow: hidden; }
+@media (max-width: 700px) { .card { width: 96px !important; margin: 0 -6px !important; padding: 12px 6px 16px !important; } .card .spr.ability { --k: 3; } .stamp { font-size: 16px !important; } }
 .card { width: 150px; margin: 0 -12px; padding: 18px 10px 22px; display: grid; justify-items: center; gap: 14px; text-align: center; color: var(--ink); background: var(--parch); box-shadow: 0 0 0 4px var(--ink), inset 0 0 0 4px var(--parch-d), 8px 12px 0 rgba(0, 0, 0, .35); transform: rotate(calc((var(--i) - 2) * 7deg)) translateY(calc((var(--i) - 2) * (var(--i) - 2) * 9px)); transition: transform .15s steps(3); }
 .card b { font-size: 16px; font-weight: normal; line-height: 1.1; }
 .card:hover { transform: rotate(0) translateY(-26px) scale(1.06); z-index: 3; }
