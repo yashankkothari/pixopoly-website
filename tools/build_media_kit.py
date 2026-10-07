@@ -19,17 +19,18 @@ RAW = os.environ.get("PIXOPOLY_RAW", "F:/Untitled Game/webraw")
 OUT = os.path.join(SITE, "media-kit")
 FONT = os.path.join(SITE, "assets", "fonts", "PixelOperator-Bold.ttf")
 
-INK = (28, 22, 18)
-NIGHT = (20, 16, 36)
-WALNUT = (59, 38, 24)
-COPPER = (227, 154, 78)
-GOLD = (242, 207, 107)
-PARCH = (244, 234, 208)
+INK = (18, 19, 31)
+NIGHT = (23, 26, 46)
+WALNUT = (38, 43, 71)        # (slate now: the game's panels)
+RIM = (52, 59, 98)
+COPPER = (232, 117, 42)      # (the game's orange)
+GOLD = (255, 216, 102)
+PARCH = (246, 237, 216)
 WHITE = (255, 248, 224)
 PINK = (232, 106, 166)
-GREEN = (63, 143, 76)
-TEAL = (42, 133, 128)
-RED = (176, 58, 46)
+GREEN = (52, 163, 90)
+TEAL = (31, 163, 155)
+RED = (220, 74, 68)
 
 PAWNS = ["Pawn", "Top Hat", "Car", "Cat", "Boat", "Castle", "Crown", "Rocket", "Duck", "Dog", "Robot", "Ghost", "Dino",
          "Penguin", "Frog", "Teapot", "Skateboard", "UFO", "Boot", "Cactus", "Mushroom", "Alien", "Crab", "Pumpkin", "Slime"]
@@ -108,14 +109,13 @@ def block(d, xy, s, size, width, fill=WHITE, shadow=INK, center=False, gap=1.2):
     return y
 
 
-def panel(img, box, fill=WALNUT, rim=COPPER, u=8):
-    """The game's frame: ink, a coloured rim, ink, then the fill, with a shadow."""
+def panel(img, box, fill=WALNUT, rim=RIM, u=8):
+    """The game's frame: ink, one thick flat rim, then the fill, with a hard shadow."""
     d = ImageDraw.Draw(img)
     x0, y0, x1, y1 = box
     d.rectangle((x0 + u * 2, y0 + u * 3, x1 + u * 2, y1 + u * 3), fill=(0, 0, 0, 110))
     d.rectangle((x0 - u * 3, y0 - u * 3, x1 + u * 3, y1 + u * 3), fill=INK)
-    d.rectangle((x0 - u * 2, y0 - u * 2, x1 + u * 2, y1 + u * 2), fill=rim)
-    d.rectangle((x0 - u, y0 - u, x1 + u, y1 + u), fill=INK)
+    d.rectangle((x0 - u * 2, y0 - u * 2, x1 + u * 2, y1 + u * 2), fill=rim)   # one thick flat slab
     d.rectangle(box, fill=fill)
 
 
@@ -170,7 +170,7 @@ def footer(img, soon="COMING SOON TO STEAM"):
     d = ImageDraw.Draw(img)
     w, h = img.size
     d.rectangle((0, h - 92, w, h), fill=WALNUT)
-    d.rectangle((0, h - 100, w, h - 92), fill=COPPER)
+    d.rectangle((0, h - 100, w, h - 92), fill=RIM)
     d.rectangle((0, h - 108, w, h - 100), fill=INK)
     text(d, (40, h - 74), "PIXOPOLY", 48, GOLD)
     text(d, (w - 40, h - 66), soon, 32, PARCH, anchor="ra")
@@ -295,7 +295,7 @@ def rules_story(size, name):
     w, h = size
     logo(img, w // 2, 150, 1)
     box = (90, 430, w - 90, 1420)
-    panel(img, box, fill=PARCH, rim=COPPER)
+    panel(img, box, fill=PARCH)
     text(d, (w // 2, 470), "HOUSE RULES", 64, RED, shadow=None, anchor="ma")
     text(d, (w // 2, 540), "OF FRIENDSHIP", 64, RED, shadow=None, anchor="ma")
     rules = ["No mercy on rent.", "A trade is a trade.", "The bank is not your mum.", "Whoever flips the board buys the snacks."]
@@ -343,7 +343,7 @@ def avatar(px, name):
     d = ImageDraw.Draw(img)
     u = px // 50
     d.rectangle((0, 0, px - 1, px - 1), fill=INK)
-    d.rectangle((u, u, px - 1 - u, px - 1 - u), fill=COPPER)
+    d.rectangle((u, u, px - 1 - u, px - 1 - u), fill=GOLD)
     d.rectangle((u * 2, u * 2, px - 1 - u * 2, px - 1 - u * 2), fill=INK)
     d.rectangle((u * 3, u * 3, px - 1 - u * 3, px - 1 - u * 3), fill=(42, 143, 138))
     die = Image.open(f"{RAW}/die_5.png").convert("RGBA")

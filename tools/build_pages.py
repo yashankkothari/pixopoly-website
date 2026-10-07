@@ -15,7 +15,7 @@ def head(title, desc):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<meta name="theme-color" content="#141024">
+<meta name="theme-color" content="#171a2e">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
 <link rel="stylesheet" href="/css/style.css">

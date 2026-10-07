@@ -96,7 +96,7 @@ def main():
     # Icons from the logo die.
     die = Image.open(f"{RAW}/die_5.png").convert("RGBA")
     for size in (32, 180, 192, 512):
-        canvas = Image.new("RGBA", (size, size), (33, 24, 20, 255))
+        canvas = Image.new("RGBA", (size, size), (23, 26, 46, 255))
         k = max(1, (size * 3 // 4) // die.width) if size >= 180 else 1
         d = up(die, k) if size >= 180 else die.resize((size - 4, size - 4), Image.NEAREST)
         canvas.alpha_composite(d, ((size - d.width) // 2, (size - d.height) // 2))
