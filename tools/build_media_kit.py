@@ -352,6 +352,220 @@ def avatar(px, name):
     img.convert("RGB").save(os.path.join(OUT, name))
 
 
+
+# ─── Logos ────────────────────────────────────────────────────────────────────
+
+GAME = os.environ.get("PIXOPOLY_GAME", "F:/Untitled Game/untitled-card-game")
+FELT = (42, 143, 138)
+
+
+def logo_parts(die=5):
+    return [Image.open(f"{RAW}/die_{die}.png").convert("RGBA") if ch == "*" else load(f"logo_{ch}.png") for ch in "PIX*POLY"]
+
+
+def wordmark(k=1, shadow=True, mono=None, gap=4):
+    """The logo on its own, transparent: PIX(die)POLY. mono = one flat colour
+    (for stamping over photos or printing)."""
+    parts = [up(p, k) if k > 1 else p for p in logo_parts()]
+    g = gap * k
+    sh = 10 * k if shadow else 0
+    w = sum(p.width for p in parts) + g * (len(parts) - 1) + sh
+    h = max(p.height for p in parts) + sh
+    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    x = 0
+    for p in parts:
+        y = h - sh - p.height
+        if mono:
+            mask = p.split()[3]
+            if p.width == p.height:   # the die: its pips and light faces cut out, so it still reads as a die
+                px = p.load()
+                mask = mask.copy()
+                mp = mask.load()
+                for yy in range(p.height):
+                    for xx in range(p.width):
+                        r, g_, b, a = px[xx, yy]
+                        if a and (r + g_ + b) / 3 > 150:
+                            mp[xx, yy] = 0
+            flat = Image.new("RGBA", p.size, mono + (255,))
+            img.paste(flat, (x, y), mask=mask)
+        else:
+            if shadow:
+                drop = Image.new("RGBA", p.size, (0, 0, 0, 0))
+                drop.paste((0, 0, 0, 110), mask=p.split()[3])
+                img.alpha_composite(drop, (x + sh * 8 // 10, y + sh))
+            img.alpha_composite(p, (x, y))
+        x += p.width + g
+    return img
+
+
+def stacked(k=1, shadow=True):
+    """PIX(die) over POLY: for square spaces."""
+    parts = [up(p, k) if k > 1 else p for p in logo_parts()]
+    top, bottom = parts[:4], parts[4:]
+    g = 4 * k
+    sh = 10 * k if shadow else 0
+    lh = max(p.height for p in parts)
+    rows = [top, bottom]
+    w = max(sum(p.width for p in r) + g * (len(r) - 1) for r in rows) + sh
+    h = lh * 2 + 18 * k + sh
+    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    for ri, r in enumerate(rows):
+        rw = sum(p.width for p in r) + g * (len(r) - 1)
+        x = (w - sh - rw) // 2
+        for p in r:
+            y = ri * (lh + 18 * k) + lh - p.height
+            if shadow:
+                drop = Image.new("RGBA", p.size, (0, 0, 0, 0))
+                drop.paste((0, 0, 0, 110), mask=p.split()[3])
+                img.alpha_composite(drop, (x + sh * 8 // 10, y + sh))
+            img.alpha_composite(p, (x, y))
+            x += p.width + g
+    return img
+
+
+def on(bg, art, size, pad_y=0):
+    img = Image.new("RGBA", size, bg + (255,))
+    paste_center(img, art, size[0] // 2, size[1] // 2 + pad_y)
+    return img
+
+
+def die_icon(px, bg=None, rim=True):
+    """The red-and-cream die from the logo, on the felt with a gold rim (or
+    transparent). Its content keeps clear of a circle crop."""
+    img = Image.new("RGBA", (px, px), (0, 0, 0, 0) if bg is None else bg + (255,))
+    d = ImageDraw.Draw(img)
+    if bg is not None and rim:
+        u = max(1, px // 50)
+        d.rectangle((0, 0, px - 1, px - 1), fill=INK)
+        d.rectangle((u, u, px - 1 - u, px - 1 - u), fill=GOLD)
+        d.rectangle((u * 2, u * 2, px - 1 - u * 2, px - 1 - u * 2), fill=INK)
+        d.rectangle((u * 3, u * 3, px - 1 - u * 3, px - 1 - u * 3), fill=bg)
+    die = Image.open(f"{RAW}/die_5.png").convert("RGBA")
+    k = max(1, int(px * (0.55 if bg is not None else 0.92)) // die.width)
+    paste_center(img, up(die, k), px // 2, px // 2)
+    return img
+
+
+def logos():
+    out = os.path.join(OUT, "logos")
+    os.makedirs(out, exist_ok=True)
+    save = lambda im, n: im.save(os.path.join(out, n))
+    for k in (1, 2, 4):
+        save(wordmark(k), f"wordmark-{k}x.png")
+    save(wordmark(2, shadow=False, mono=WHITE), "wordmark-white.png")
+    save(wordmark(2, shadow=False, mono=INK), "wordmark-black.png")
+    save(wordmark(2, shadow=False, mono=GOLD), "wordmark-gold.png")
+    save(on(NIGHT, wordmark(2), (2400, 800)), "wordmark-on-dark.png")
+    save(on(PARCH, wordmark(2), (2400, 800)), "wordmark-on-light.png")
+    save(on(FELT, wordmark(2), (2400, 800)), "wordmark-on-felt.png")
+    save(stacked(2), "stacked-2x.png")
+    save(on(NIGHT, stacked(2), (1200, 1200)), "stacked-on-dark.png")
+    save(on(PARCH, stacked(2), (1200, 1200)), "stacked-on-light.png")
+    for px in (512, 1024):
+        save(die_icon(px), f"die-{px}.png")
+        save(die_icon(px, FELT), f"app-icon-{px}.png")
+    save(die_icon(1024, NIGHT), "app-icon-dark-1024.png")
+
+
+# ─── Profile pictures and banners for every platform ─────────────────────────
+
+def city_strip(names, k):
+    pics = [up(Image.open(f"{GAME}/assets/sprites/cities/card/{c}.png").convert("RGBA"), k) for c in names]
+    return pics
+
+
+def banner(size, name, logo_k=1, safe=None, line=True, pawns=True):
+    """The logo over the night city, pawns along the street. `safe` = the box
+    every platform keeps visible (content stays inside it)."""
+    img = backdrop(size, "city", 0.15)
+    d = ImageDraw.Draw(img)
+    w, h = size
+    sx, sy, sw, shh = safe or (0, 0, w, h)
+    mark = wordmark(logo_k)
+    if mark.width > sw * 0.8:
+        mark = wordmark(1)
+    cy = sy + shh // 2 - (30 if line else 0)
+    paste_center(img, mark, sx + sw // 2, cy)
+    if line:
+        size_t = 48 if sw >= 1200 else 32
+        text(d, (sx + sw // 2, cy + mark.height // 2 + 16), "Buy the world. Bankrupt your friends.", size_t, WHITE, anchor="ma")
+    if pawns:
+        picks = [14, 0, 15, 10, 3, 16, 12, 20, 7, 23, 11, 8, 1, 5, 9, 13, 2, 4, 6, 17, 18, 19, 21, 22, 24]
+        k = 6 if h >= 600 else 4
+        step = 20 * k + 12
+        n = min(len(picks), w // step)
+        x0 = (w - n * step) // 2
+        for i in range(n):
+            p = pawn(picks[i], k)
+            img.alpha_composite(p, (x0 + i * step, h - p.height - max(10, h // 40)))
+    img.convert("RGB").save(os.path.join(OUT, name))
+
+
+def highlight(name, art):
+    """An Instagram highlight cover: 1080 x 1920, art in the middle circle."""
+    img = Image.new("RGBA", (1080, 1920), NIGHT + (255,))
+    d = ImageDraw.Draw(img)
+    d.ellipse((140, 560, 940, 1360), fill=FELT)
+    d.ellipse((140, 560, 940, 1360), outline=GOLD, width=24)
+    paste_center(img, art, 540, 960)
+    img.convert("RGB").save(os.path.join(OUT, name))
+
+
+def socials():
+    for sub in ("youtube", "discord", "facebook", "tiktok", "reddit", "twitch", "instagram/highlights"):
+        os.makedirs(os.path.join(OUT, sub), exist_ok=True)
+    # Profile pictures (one picture, every platform): circle-safe.
+    for px, n in [(1080, "instagram/profile-1080.png"), (800, "youtube/avatar-800.png"), (512, "discord/server-icon-512.png"),
+                  (720, "facebook/profile-720.png"), (1080, "tiktok/avatar-1080.png"), (256, "reddit/avatar-256.png"),
+                  (800, "twitch/avatar-800.png")]:
+        die_icon(px, FELT).convert("RGB").save(os.path.join(OUT, n))
+    # Banners: each platform's size, content inside its safe area.
+    banner((2560, 1440), "youtube/banner-2560x1440.png", 2, safe=(507, 508, 1546, 423))
+    banner((1640, 624), "facebook/cover-1640x624.png", 1, safe=(150, 60, 1340, 504))
+    banner((960, 540), "discord/banner-960x540.png", 1)
+    banner((1920, 1080), "discord/invite-splash-1920x1080.png", 2)
+    banner((1920, 384), "reddit/banner-1920x384.png", 1, line=False, pawns=False)
+    banner((1200, 480), "twitch/offline-banner-1200x480.png", 1, line=True, pawns=False)
+    banner((1500, 500), "x/header-1500x500.png", 1, safe=(0, 0, 1500, 420))
+    # Highlight covers.
+    em = up(load("emotes.png"), 24)
+    house = up(load("house.png"), 14)
+    cairo = city_strip(["cairo"], 11)[0]
+    highlight("instagram/highlights/play.png", up(Image.open(f"{RAW}/die_5.png").convert("RGBA"), 3))
+    highlight("instagram/highlights/pawns.png", pawn(14, 18))
+    highlight("instagram/highlights/cities.png", cairo)
+    highlight("instagram/highlights/chaos.png", em.crop((2 * 432, 0, 3 * 432, 432)))
+    highlight("instagram/highlights/build.png", house)
+    highlight("instagram/highlights/news.png", stacked(1, shadow=False))
+
+
+def cities_post(size, name):
+    """The board's cities: a grid of their property-card pictures."""
+    img = backdrop(size, "table", 0.55)
+    d = ImageDraw.Draw(img)
+    w, h = size
+    wide = w > h
+    tag(img, (60, 56), "22 CITIES. ALL FOR SALE.", 32, GOLD)
+    y = block(d, (60, 140), "Buy Paris. Build on Tokyo. Charge rent in Rio.", 64, w - 120, gap=1.15)
+    names = ["cairo", "istanbul", "mumbai", "paris", "rome", "berlin", "tokyo", "sydney", "london", "new_york_city", "rio_de_janeiro", "hong_kong"]
+    cols = 4 if wide else 3
+    rows = 3 if wide else 4
+    k = 6 if wide else 7
+    pics = city_strip(names[: cols * rows], k)
+    cw, ch = pics[0].width, pics[0].height
+    gap = 20
+    gw = cols * cw + (cols - 1) * gap
+    x0 = (w - gw) // 2
+    top = max(y + 40, (h - 100 - (rows * ch + (rows - 1) * gap)) // 2 + 50)
+    for i, pic in enumerate(pics):
+        x = x0 + (i % cols) * (cw + gap)
+        yy = top + (i // cols) * (ch + gap)
+        ImageDraw.Draw(img).rectangle((x - 6, yy - 6, x + cw + 5, yy + ch + 5), fill=INK)
+        img.alpha_composite(pic, (x, yy))
+    footer(img)
+    img.convert("RGB").save(os.path.join(OUT, name))
+
+
 def main():
     for sub in ("instagram", "x", "profile"):
         os.makedirs(os.path.join(OUT, sub), exist_ok=True)
@@ -369,9 +583,12 @@ def main():
     toronto(wide, "x/post-02-toronto.png")
     pawns_post(wide, "x/post-03-pawns.png")
     chaos(wide, "x/post-04-chaos.png")
-    header((1500, 500), "x/header-1500x500.png")
     avatar(400, "profile/avatar-400.png")
     avatar(800, "profile/avatar-800.png")
+    cities_post(tall, "instagram/post-07-cities.png")
+    cities_post(wide, "x/post-05-cities.png")
+    logos()
+    socials()   # (also the X header)
 
     # One download for the press page.
     zpath = os.path.join(OUT, "pixopoly-media-kit.zip")

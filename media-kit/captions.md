@@ -22,6 +22,79 @@ A pixel-art property trading game. Buy the world, bankrupt your friends, apologi
 **One line, anywhere**
 Buy the world. Bankrupt your friends.
 
+## Instagram profile
+
+Everything the profile page asks for, ready to paste.
+
+- **Name** (shows in search, 30 characters): `Pixopoly · pixel property game`
+- **Username**: `@pixopolygame` (or `@playpixopoly` if it's taken)
+- **Category**: Video Game
+- **Profile picture**: `instagram/profile-1080.png` (the die on the felt: it stays whole inside Instagram's circle)
+- **Link**: https://intebat.itch.io/pixopoly (the Steam page once it exists)
+- **Link title**: `Play the free prototype`
+
+**Bio, option A (the one to use)**
+Buy the world. Bankrupt your friends. 🎲
+Pixel-art property trading for 2 to 6 players.
+Coming soon to Steam ↓
+
+**Bio, option B (drier)**
+A pixel-art property trading game.
+22 cities. 25 pawns. Zero mercy.
+Coming soon to Steam ↓
+
+**Bio, option C (once the Steam page is up)**
+Buy the world. Bankrupt your friends.
+Pixel-art property trading, 2 to 6 players.
+Wishlist on Steam ↓
+
+**Story highlights** (covers in `instagram/highlights/`)
+
+| Cover | Name |
+|---|---|
+| `play.png` | Play |
+| `pawns.png` | Pawns |
+| `cities.png` | Cities |
+| `chaos.png` | Chaos |
+| `build.png` | Build |
+| `news.png` | News |
+
+**Pin these three** to the top of the grid: the announcement (post 1), the cities (post 7) and the board (post 5).
+
+## Other platforms
+
+**YouTube**: channel name `Pixopoly`. Avatar `youtube/avatar-800.png`, banner `youtube/banner-2560x1440.png` (the logo sits inside the part YouTube shows on phones).
+Description:
+Pixopoly is a pixel-art property trading game for 2 to 6 players. Buy cities, build hotels, make deals and bankrupt your friends: online, on your network, or one mouse passed round the couch. Trailers, dev logs and the odd game that ended a friendship. Coming soon to Steam. Free prototype: https://intebat.itch.io/pixopoly
+
+**Discord**: server name `Pixopoly`. Icon `discord/server-icon-512.png`, banner `discord/banner-960x540.png`, invite background `discord/invite-splash-1920x1080.png`.
+Server description: The table for Pixopoly players. Find a game, share your worst trades, report bugs and vote on what we build next.
+Channel ideas: #announcements, #looking-for-game, #trades-gone-wrong, #bug-reports, #ideas.
+
+**Facebook**: page name `Pixopoly`, category Video Game. Profile `facebook/profile-720.png`, cover `facebook/cover-1640x624.png`.
+About: A pixel-art property trading game for 2 to 6 players. Buy the world. Bankrupt your friends. Coming soon to Steam.
+
+**TikTok**: avatar `tiktok/avatar-1080.png`. Bio (80 characters): `Buy the world. Bankrupt your friends. Pixel-art board game, soon on Steam.`
+
+**Reddit** (r/pixopoly or a profile): avatar `reddit/avatar-256.png`, banner `reddit/banner-1920x384.png`. Description: Pixopoly, a pixel-art property trading game. Share games, trades and bugs.
+
+**Twitch**: avatar `twitch/avatar-800.png`, offline banner `twitch/offline-banner-1200x480.png`. Bio: Live games of Pixopoly, the pixel-art property trading game. Come watch someone lose Toronto.
+
+## Logos
+
+All in `logos/`. Scale pixel art by whole numbers only (2x, 3x, 4x) with nearest-neighbour filtering: never smooth it.
+
+| File | Use it for |
+|---|---|
+| `wordmark-1x/2x/4x.png` | The logo on its own, transparent, with its drop shadow |
+| `wordmark-on-dark/light/felt.png` | Ready-made on the game's three backgrounds |
+| `wordmark-white.png`, `wordmark-black.png`, `wordmark-gold.png` | One colour, for over photos, video and print |
+| `stacked-2x.png`, `stacked-on-dark/light.png` | PIX / POLY on two lines, for square spaces |
+| `die-512/1024.png` | The die by itself, transparent |
+| `app-icon-512/1024.png`, `app-icon-dark-1024.png` | Square icon (avatars, app tiles, favicons) |
+
+Keep a clear space round the logo of at least the height of one letter. Don't recolour the letters, stretch them, add outlines or put the full-colour logo on busy art without the dark backing.
+
 ## Posts
 
 Each has an Instagram caption and a shorter one for X. Pictures are in `instagram/` and `x/`.
@@ -95,6 +168,20 @@ Dress for the rent you want.
 
 Pawns, dice, table cloths and titles, all unlocked by playing. There is no shop and there never will be.
 
+### 7. The cities (`post-07-cities`, `x/post-05-cities`)
+
+**Instagram**
+22 cities. All of them for sale.
+
+Every property in Pixopoly is a real place, drawn in pixels: the pyramids at sunset, the Blue Mosque at dusk, Tokyo Tower under Fuji. Click a deed and the city comes alive: clouds drift, harbour lights move, windows flicker.
+
+Which one are you buying first?
+
+**X**
+22 cities. All of them for sale.
+
+Buy Paris. Build on Tokyo. Charge rent in Rio.
+
 ### Stories
 
 - `story-01-announce`: no caption needed. Add a link sticker to the itch page (or the Steam page once it exists).
@@ -137,3 +224,4 @@ Three or four, at the end, never in a sentence.
 | 10 | The board (post 5) |
 | 12 | The locker (post 6) and story 2 with the poll |
 | 14 | A short clip of the dice throw, with "The bank never loses its temper. You will." |
+| 16 | The cities (post 7): ask which one they'd buy first |

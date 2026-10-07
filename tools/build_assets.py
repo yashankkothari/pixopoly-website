@@ -90,6 +90,17 @@ def main():
     hand = sheet("hand")
     up(cut(hand, "open"), 2).save(f"{IMG}/hand_open.png")
 
+    # A tour of the board's cities: their property-card pictures in a row
+    # (tools/art/city_tiles.py in the game), drawn at 4x.
+    cities = ["cairo", "istanbul", "paris", "tokyo", "rio_de_janeiro", "new_york_city"]
+    pics = [Image.open(f"{GAME}/assets/sprites/cities/card/{c}.png").convert("RGBA") for c in cities]
+    k, gap = 4, 4
+    cw, ch = pics[0].width * k, pics[0].height * k
+    tour = Image.new("RGBA", (len(pics) * (cw + gap * 2) , ch + gap * 2), (18, 19, 31, 255))
+    for i, pic in enumerate(pics):
+        tour.alpha_composite(up(pic, k), (gap + i * (cw + gap * 2), gap))
+    tour.save(f"{IMG}/cities.png")
+
     # The hero's backdrop: the Night City table by itself (no board on it).
     Image.open(f"{RAW}/wide_city.png").convert("RGB").save(f"{IMG}/bg_city.png")
 

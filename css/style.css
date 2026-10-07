@@ -152,6 +152,7 @@ p { font-size: 16px; max-width: 46ch; }
 .kicker { font-size: 16px !important; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); background: var(--orange); padding: 4px 12px 6px; box-shadow: 0 0 0 4px var(--ink); max-width: none; }
 .kicker.pink { background: var(--pink); } .kicker.gold { background: var(--gold); } .kicker.teal { background: #56c2b8; }
 .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 14px; padding: 0; margin: 6px 0 0; }
+.cities { display: block; width: 100%; height: auto; margin: 22px 0 0; image-rendering: pixelated; box-shadow: 0 0 0 4px var(--ink); }
 .chips li { font-size: 16px; padding: 6px 12px 8px; background: var(--slate-l); box-shadow: 0 0 0 4px var(--ink); }
 
 /* Screenshots sit in the game's own frame. */

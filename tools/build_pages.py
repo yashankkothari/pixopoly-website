@@ -110,7 +110,7 @@ def main():
   </div>
 
   <h2>Logo, key art and social pictures</h2>
-  <p><a href="/assets/img/og.png" download>Key art (1200 x 630)</a>. Scale pixel art up by whole numbers with nearest-neighbour filtering. Ready-made posts, banners and captions for Instagram and X are in the <a href="/media-kit/pixopoly-media-kit.zip" download>media kit (zip)</a>.</p>
+  <p><a href="/assets/img/og.png" download>Key art (1200 x 630)</a>. Scale pixel art up by whole numbers with nearest-neighbour filtering. Logos, ready-made posts, profile pictures and banners for Instagram, X, YouTube, Discord, Facebook, TikTok, Reddit and Twitch, and the words to go with them, are in the <a href="/media-kit/pixopoly-media-kit.zip" download>media kit (zip)</a>.</p>
 
   <h2>Credits</h2>
   <p>Font: Pixel Operator by Jayvee Enaguas, released under CC0.</p>
