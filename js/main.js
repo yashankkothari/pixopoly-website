@@ -41,6 +41,18 @@
     setTimeout(() => b.classList.remove("pop"), 300);
   }));
 
+  // ─── The teaser: plays muted; a button turns the sound on ──────────────────
+  const reel = $("#reel"), sound = $("#sound");
+  if (reel && sound) {
+    if (calm) { reel.removeAttribute("autoplay"); reel.pause(); reel.controls = true; }
+    sound.addEventListener("click", () => {
+      reel.muted = !reel.muted;
+      if (!reel.muted) { reel.currentTime = 0; reel.play(); }
+      sound.setAttribute("aria-pressed", String(!reel.muted));
+      sound.textContent = reel.muted ? "Sound on" : "Sound off";
+    });
+  }
+
   // ─── The logo's die hops and lands on a new face ───────────────────────────
   const die = $("#die");
   const dieBox = die && die.parentElement;
