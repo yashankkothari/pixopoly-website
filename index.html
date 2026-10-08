@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pixopoly: buy the world, bankrupt your friends</title>
-<meta name="description" content="Pixopoly is a pixel-art property trading game for 2 to 6 players. Play online, on your network, or on one PC. Coming soon to Steam.">
+<title>Pixopoly: coming soon</title>
+<meta name="description" content="Pixopoly is a pixel-art property trading game. Coming soon to Steam.">
 <meta name="theme-color" content="#171a2e">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
@@ -12,49 +12,24 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pixopoly">
-<meta property="og:title" content="Pixopoly: buy the world, bankrupt your friends">
-<meta property="og:description" content="A pixel-art property trading game for 2 to 6 players. Online, on your network, or on one PC. Coming soon to Steam.">
+<meta property="og:title" content="Pixopoly: coming soon">
+<meta property="og:description" content="A pixel-art property trading game. Coming soon to Steam.">
 <meta property="og:image" content="/assets/img/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pixopoly: buy the world, bankrupt your friends">
-<meta name="twitter:description" content="A pixel-art property trading game for 2 to 6 players. Coming soon to Steam.">
+<meta name="twitter:title" content="Pixopoly: coming soon">
+<meta name="twitter:description" content="A pixel-art property trading game. Coming soon to Steam.">
 <meta name="twitter:image" content="/assets/img/og.png">
 <link rel="preload" href="/assets/fonts/PixelOperator-Bold.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="/assets/img/bg_city.png" as="image">
 <link rel="stylesheet" href="/css/style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "Pixopoly",
-  "description": "A pixel-art property trading board game for 2 to 6 players, with ability cards, Chaos Mode, 2v2 teams, and online, network and same-PC play.",
-  "genre": ["Board game", "Strategy", "Party"],
-  "gamePlatform": "PC",
-  "operatingSystem": "Windows",
-  "applicationCategory": "Game",
-  "playMode": ["SinglePlayer", "MultiPlayer"],
-  "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 4 }
-}
-</script>
+<!-- The holding page until the Steam page is up. The full site lives on the
+     full-site branch: bring its index.html back at launch. -->
 </head>
-<body>
-<a class="skip" href="#game">Skip to content</a>
-
-<header class="top">
-  <a class="brand" href="#top" aria-label="Pixopoly, back to top">PIXOPOLY</a>
-  <nav aria-label="Sections">
-    <a href="#game">The game</a>
-    <a href="#twists">The twists</a>
-    <a href="#yours">Your stuff</a>
-    <a href="#together">Play together</a>
-  </nav>
-  <a class="btn green sm" data-link="steam" href="#wishlist">Wishlist</a>
-</header>
+<body class="holding">
 
 <main id="top">
-
   <section class="hero">
     <div class="hero-bg" aria-hidden="true"></div>
     <h1 class="logo" aria-label="Pixopoly">
@@ -68,147 +43,15 @@
       <img src="/assets/img/logo_Y.png" alt="" width="116" height="146">
     </h1>
     <p class="tag">Buy the world. Bankrupt your friends.</p>
-    <p class="sub">A pixel-art property trading game for 2 to 6 players. Online, on your network, or one mouse passed around the couch.</p>
-    <div class="cta">
-      <a class="btn green big" data-link="steam" href="#wishlist">Wishlist on Steam</a>
-      <a class="btn gold big" data-link="itch" href="https://intebat.itch.io/pixopoly" rel="noopener">Play the prototype</a>
-    </div>
-    <p class="soon">Coming soon to Steam for Windows.</p>
+    <p class="sub">A pixel-art property trading game.</p>
+    <p class="soon-badge">Coming soon to Steam</p>
     <div class="parade" id="parade" aria-hidden="true"></div>
   </section>
-
-  <section class="beat" id="game">
-    <div class="copy reveal">
-      <p class="kicker">The game you know</p>
-      <h2>Roll. Buy. Build. Charge your best friend $950 for one night in Toronto.</h2>
-      <p>Forty tiles, two dice, and a bank that never loses its temper. If you have ever flipped a board in anger, you already know how to play.</p>
-      <p>Every property is a real city, drawn in pixels: the pyramids at sunset in Cairo, the Blue Mosque at dusk in Istanbul, Tokyo Tower under Fuji. Open a deed and the city comes alive.</p>
-      <ul class="chips">
-        <li>2 to 6 players</li>
-        <li>20 to 60 minutes</li>
-        <li>22 cities</li>
-        <li>CPUs that trade back</li>
-      </ul>
-      <img class="cities" src="/assets/img/cities.png" alt="Six of the board's cities in pixel art: Cairo's pyramids, Istanbul's Blue Mosque, the Eiffel Tower, Tokyo Tower with Mount Fuji, Rio's Christ the Redeemer and the New York skyline" width="1152" height="104" loading="lazy">
-    </div>
-    <button class="shot reveal" data-shot="board_table" aria-label="Open screenshot: a game in progress">
-      <img src="/assets/shots/board_table_s.webp" alt="A Pixopoly game in progress on the Game Night table" width="960" height="540" loading="lazy">
-    </button>
-  </section>
-
-  <section class="beat flip" id="twists">
-    <div class="copy reveal">
-      <p class="kicker pink">Until someone plays a card</p>
-      <h2>Twelve sneaky cards. One wild event every round.</h2>
-      <p>Swap places with the leader. Dodge a hotel bill. Then the round opens with an <b id="chaos">Earthquake</b> and all your plans are worth exactly nothing.</p>
-      <p class="small">Both are switches. Turn them off and it's the classic.</p>
-    </div>
-    <div class="cards reveal" aria-hidden="true">
-      <div class="card" style="--i:0"><i class="spr ability" style="--n:0"></i><b>Extra Roll</b></div>
-      <div class="card" style="--i:1"><i class="spr ability" style="--n:1"></i><b>Swap Places</b></div>
-      <div class="card" style="--i:2"><i class="spr ability" style="--n:2"></i><b>Rent Shield</b></div>
-      <div class="card" style="--i:3"><i class="spr ability" style="--n:3"></i><b>Sabotage</b></div>
-      <div class="card" style="--i:4"><i class="spr ability" style="--n:4"></i><b>House Thief</b></div>
-      <div class="stamp" id="stamp">PROPERTY BOOM</div>
-    </div>
-  </section>
-
-  <section class="beat" id="yours">
-    <div class="copy reveal">
-      <p class="kicker gold">Your pawn, your dice, your table</p>
-      <h2>25 pawns. 27 dice. Zero shops.</h2>
-      <p>Everything is earned by playing. Be a frog. Be a teapot. Be a skateboard with gold dice. Nobody can stop you.</p>
-      <div class="picker" id="picker" aria-label="Some of the pawns"></div>
-    </div>
-    <div class="showcase reveal">
-      <div class="felt">
-        <i class="spr pawn big" id="bigpawn" style="--n:14"></i>
-        <i class="spr skin" id="bigdie" style="--n:5"></i>
-        <i class="spr skin" id="bigdie2" style="--n:9"></i>
-      </div>
-      <p class="caption" id="pawnname">Frog</p>
-    </div>
-  </section>
-
-  <section class="tables" id="tables">
-    <div class="copy reveal center">
-      <p class="kicker teal">Five tables</p>
-      <h2>Pick where you play. Watch it change as the game goes on.</h2>
-    </div>
-    <div class="tabs reveal" role="tablist" aria-label="Tables">
-      <button role="tab" aria-selected="true" data-table="board_table">Game Night</button>
-      <button role="tab" aria-selected="false" data-table="board_city">Night City</button>
-      <button role="tab" aria-selected="false" data-table="board_map">Town Map</button>
-      <button role="tab" aria-selected="false" data-table="board_space">Deep Space</button>
-    </div>
-    <button class="shot wide reveal" id="tableshot" data-shot="board_table" aria-label="Open this screenshot">
-      <img src="/assets/shots/board_table_s.webp" alt="The board on the selected table" width="960" height="540" loading="lazy">
-    </button>
-  </section>
-
-  <section class="together" id="together">
-    <div class="copy reveal center">
-      <p class="kicker">Play together</p>
-      <h2>Bring people. Or don't.</h2>
-    </div>
-    <div class="ways">
-      <article class="way reveal">
-        <i class="spr pawn" style="--n:7"></i><i class="spr pawn" style="--n:12"></i>
-        <h3>Online</h3>
-        <p>Read out a six-letter code. They're in.</p>
-      </article>
-      <article class="way reveal">
-        <i class="spr pawn" style="--n:3"></i><i class="spr pawn" style="--n:10"></i>
-        <h3>Same room</h3>
-        <p>Games on your network find each other. No accounts.</p>
-      </article>
-      <article class="way reveal">
-        <i class="spr pawn" style="--n:0"></i><i class="spr pawn" style="--n:15"></i>
-        <h3>One PC</h3>
-        <p>Pass the mouse, or fill the seats with CPUs who never get tired of losing to you.</p>
-      </article>
-    </div>
-    <p class="small center reveal">Four of you? Play 2 v 2 and share the blame.</p>
-  </section>
-
-  <section class="gallery" id="shots" aria-label="Screenshots">
-    <button class="shot reveal" data-shot="deed"><img src="/assets/shots/deed_s.webp" alt="A property card for Toronto: the city in pixel art over its rents" width="960" height="540" loading="lazy"></button>
-    <button class="shot reveal" data-shot="manage"><img src="/assets/shots/manage_s.webp" alt="Managing properties: houses, hotels and mortgages" width="960" height="540" loading="lazy"></button>
-    <button class="shot reveal" data-shot="locker"><img src="/assets/shots/locker_s.webp" alt="The locker: pawns, dice and cloths" width="960" height="540" loading="lazy"></button>
-    <button class="shot reveal" data-shot="results"><img src="/assets/shots/results_s.webp" alt="The results screen" width="960" height="540" loading="lazy"></button>
-  </section>
-
-  <section class="final" id="wishlist">
-    <img class="hand" src="/assets/img/hand_open.png" alt="" width="182" height="276" loading="lazy">
-    <h2>Coming soon to Steam.</h2>
-    <p>Wishlist it and Steam tells you the minute it's out. No newsletter. No spam. One ping.</p>
-    <div class="cta">
-      <a class="btn green big" data-link="steam" href="#wishlist">Wishlist on Steam</a>
-      <a class="btn gold big" data-link="itch" href="https://intebat.itch.io/pixopoly" rel="noopener">Play the prototype</a>
-    </div>
-    <div class="faq">
-      <details><summary>Is this just that other property game?</summary><p>It's the one you already know how to play, with ability cards, Chaos Mode, teams and five tables on top. Every twist has an off switch.</p></details>
-      <details><summary>When is it out?</summary><p>When it's good. The prototype is playable today on itch.</p></details>
-      <details><summary>Does it work with a controller?</summary><p>Yes. Keyboard, mouse or controller, on one PC or four.</p></details>
-    </div>
-  </section>
-
 </main>
 
 <footer class="foot">
-  <span class="brand">PIXOPOLY</span>
-  <nav aria-label="More">
-    <a href="/presskit">Press kit</a>
-    <a href="/privacy">Privacy</a>
-    <a data-link="itch" href="https://intebat.itch.io/pixopoly" rel="noopener">itch.io</a>
-  </nav>
-  <small>&copy; <span id="year">2026</span> Pixopoly. Made with far too many dice.</small>
+  <small>&copy; <span id="year">2026</span> Pixopoly &middot; <a href="/privacy">Privacy</a></small>
 </footer>
-
-<div class="lightbox" id="lightbox" hidden>
-  <button class="close" aria-label="Close">X</button>
-  <img alt="" id="lightimg">
-</div>
 
 <script src="/js/main.js" defer></script>
 </body>
