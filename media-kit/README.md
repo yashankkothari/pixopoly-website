@@ -1,4 +1,4 @@
-# Pixopoly media kit
+# Pixonomy media kit
 
 Ready-to-post pictures for Instagram and X, and the words to go with them.
 
@@ -18,7 +18,7 @@ Ready-to-post pictures for Instagram and X, and the words to go with them.
 | `profile/avatar-400.png`, `avatar-800.png` | Profile picture with a square frame | square |
 | `captions.md` | Instagram profile (name, bio options, highlights), descriptions for every platform, logo rules, a caption for every picture, a posting plan | |
 
-`pixopoly-media-kit.zip` is all of it in one download.
+`pixonomy-media-kit.zip` is all of it in one download.
 
 The pictures are built from the game's own art by `tools/build_media_kit.py`. To change the wording on a picture, edit the text in that script and run it again.
 

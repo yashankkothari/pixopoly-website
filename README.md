@@ -1,6 +1,6 @@
-# Pixopoly website
+# Pixonomy website
 
-The marketing site for Pixopoly. Plain HTML, CSS and JavaScript: no build step, no dependencies.
+The marketing site for Pixonomy. Plain HTML, CSS and JavaScript: no build step, no dependencies.
 
 ## Put it on Vercel
 
@@ -15,7 +15,7 @@ Or from this folder with the Vercel CLI: `npx vercel` for a preview, `npx vercel
 ### First push to GitHub
 
 ```
-git remote add origin https://github.com/<you>/pixopoly-website.git
+git remote add origin https://github.com/<you>/pixonomy-website.git
 git push -u origin main
 ```
 
@@ -46,7 +46,7 @@ python tools/build_media_kit.py   # social pictures and the zip
 ```
 
 `build_assets.py` reads three folders, set with environment variables if they move:
-`PIXOPOLY_GAME` (the Godot project), `PIXOPOLY_RAW` (dice, pawns and table art exported from the game) and `PIXOPOLY_SHOTS` (1920x1080 screenshots).
+`PIXONOMY_GAME` (the Godot project), `PIXONOMY_RAW` (dice, pawns and table art exported from the game) and `PIXONOMY_SHOTS` (1920x1080 screenshots).
 
 ## Preview on your own machine
 

@@ -13,9 +13,9 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(HERE)
-GAME = os.environ.get("PIXOPOLY_GAME", "F:/Untitled Game/untitled-card-game")
-RAW = os.environ.get("PIXOPOLY_RAW", "F:/Untitled Game/webraw")
-SHOTS = os.environ.get("PIXOPOLY_SHOTS", "")
+GAME = os.environ.get("PIXONOMY_GAME", "F:/Untitled Game/untitled-card-game")
+RAW = os.environ.get("PIXONOMY_RAW", "F:/Untitled Game/webraw")
+SHOTS = os.environ.get("PIXONOMY_SHOTS", "")
 IMG = os.path.join(SITE, "assets", "img")
 OUT_SHOTS = os.path.join(SITE, "assets", "shots")
 
@@ -52,7 +52,7 @@ def main():
 
     # Logo letters (the die goes where the first O would be).
     logo = sheet("logo")
-    for ch in "PIXOLY":
+    for ch in "PIXONMY":
         up(cut(logo, ch), 2).save(f"{IMG}/logo_{ch}.png")
     for n in range(1, 7):
         Image.open(f"{RAW}/die_{n}.png").save(f"{IMG}/die_{n}.png")
@@ -130,7 +130,7 @@ def main():
         og = board.resize((1200, 675), Image.LANCZOS).crop((0, 22, 1200, 652))
         shade = Image.new("RGBA", og.size, (16, 12, 24, 150))
         og = Image.alpha_composite(og, shade)
-        letters = [up(cut(logo, c), 2) if c != "*" else Image.open(f"{RAW}/die_5.png").convert("RGBA") for c in "PIX*POLY"]
+        letters = [up(cut(logo, c), 2) if c != "*" else Image.open(f"{RAW}/die_5.png").convert("RGBA") for c in "PIX*NOMY"]
         total = sum(i.width for i in letters) + 6 * 7
         x = (1200 - total) // 2
         for i in letters:

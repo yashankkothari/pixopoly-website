@@ -1,6 +1,6 @@
 {
-  "name": "Pixopoly",
-  "short_name": "Pixopoly",
+  "name": "Pixonomy",
+  "short_name": "Pixonomy",
   "description": "A pixel-art property trading board game. Coming soon to Steam.",
   "start_url": "/",
   "display": "browser",

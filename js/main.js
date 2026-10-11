@@ -1,11 +1,11 @@
-/* Pixopoly: marketing site. No dependencies. */
+/* Pixonomy: marketing site. No dependencies. */
 (() => {
   "use strict";
 
   // ─── Edit these when the pages exist ───────────────────────────────────────
   const CONFIG = {
-    steam: "",                                   // e.g. "https://store.steampowered.com/app/1234567/Pixopoly/"
-    itch: "https://intebat.itch.io/pixopoly",
+    steam: "",                                   // e.g. "https://store.steampowered.com/app/1234567/Pixonomy/"
+    itch: "https://intebat.itch.io/pixonomy",
   };
 
   const $ = (q, el = document) => el.querySelector(q);

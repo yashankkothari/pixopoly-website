@@ -1,13 +1,13 @@
-# Pixopoly: captions and copy
+# Pixonomy: captions and copy
 
 Words to go with the pictures in this folder. The voice: a friend who is about to charge you rent and is enjoying it. Short sentences. Dry. Never shouty, never "epic". No exclamation marks unless a die just landed on doubles.
 
 Things we always say the same way:
 
-- **Pixopoly** (one word, capital P).
+- **Pixonomy** (one word, capital P).
 - "a pixel-art property trading game" (not "Monopoly clone", not "Monopoly-like").
 - "Coming soon to Steam." Until there's a date, there's no date.
-- The free prototype: https://intebat.itch.io/pixopoly
+- The free prototype: https://intebat.itch.io/pixonomy
 
 ## Bios
 
@@ -26,11 +26,11 @@ Buy the world. Bankrupt your friends.
 
 Everything the profile page asks for, ready to paste.
 
-- **Name** (shows in search, 30 characters): `Pixopoly · pixel property game`
-- **Username**: `@pixopolygame` (or `@playpixopoly` if it's taken)
+- **Name** (shows in search, 30 characters): `Pixonomy · pixel property game`
+- **Username**: `@pixonomygame` (or `@playpixonomy` if it's taken)
 - **Category**: Video Game
 - **Profile picture**: `instagram/profile-1080.png` (the die on the felt: it stays whole inside Instagram's circle)
-- **Link**: https://intebat.itch.io/pixopoly (the Steam page once it exists)
+- **Link**: https://intebat.itch.io/pixonomy (the Steam page once it exists)
 - **Link title**: `Play the free prototype`
 
 **Bio, option A (the one to use)**
@@ -63,22 +63,22 @@ Wishlist on Steam ↓
 
 ## Other platforms
 
-**YouTube**: channel name `Pixopoly`. Avatar `youtube/avatar-800.png`, banner `youtube/banner-2560x1440.png` (the logo sits inside the part YouTube shows on phones).
+**YouTube**: channel name `Pixonomy`. Avatar `youtube/avatar-800.png`, banner `youtube/banner-2560x1440.png` (the logo sits inside the part YouTube shows on phones).
 Description:
-Pixopoly is a pixel-art property trading game for 2 to 6 players. Buy cities, build hotels, make deals and bankrupt your friends: online, on your network, or one mouse passed round the couch. Trailers, dev logs and the odd game that ended a friendship. Coming soon to Steam. Free prototype: https://intebat.itch.io/pixopoly
+Pixonomy is a pixel-art property trading game for 2 to 6 players. Buy cities, build hotels, make deals and bankrupt your friends: online, on your network, or one mouse passed round the couch. Trailers, dev logs and the odd game that ended a friendship. Coming soon to Steam. Free prototype: https://intebat.itch.io/pixonomy
 
-**Discord**: server name `Pixopoly`. Icon `discord/server-icon-512.png`, banner `discord/banner-960x540.png`, invite background `discord/invite-splash-1920x1080.png`.
-Server description: The table for Pixopoly players. Find a game, share your worst trades, report bugs and vote on what we build next.
+**Discord**: server name `Pixonomy`. Icon `discord/server-icon-512.png`, banner `discord/banner-960x540.png`, invite background `discord/invite-splash-1920x1080.png`.
+Server description: The table for Pixonomy players. Find a game, share your worst trades, report bugs and vote on what we build next.
 Channel ideas: #announcements, #looking-for-game, #trades-gone-wrong, #bug-reports, #ideas.
 
-**Facebook**: page name `Pixopoly`, category Video Game. Profile `facebook/profile-720.png`, cover `facebook/cover-1640x624.png`.
+**Facebook**: page name `Pixonomy`, category Video Game. Profile `facebook/profile-720.png`, cover `facebook/cover-1640x624.png`.
 About: A pixel-art property trading game for 2 to 6 players. Buy the world. Bankrupt your friends. Coming soon to Steam.
 
 **TikTok**: avatar `tiktok/avatar-1080.png`. Bio (80 characters): `Buy the world. Bankrupt your friends. Pixel-art board game, soon on Steam.`
 
-**Reddit** (r/pixopoly or a profile): avatar `reddit/avatar-256.png`, banner `reddit/banner-1920x384.png`. Description: Pixopoly, a pixel-art property trading game. Share games, trades and bugs.
+**Reddit** (r/pixonomy or a profile): avatar `reddit/avatar-256.png`, banner `reddit/banner-1920x384.png`. Description: Pixonomy, a pixel-art property trading game. Share games, trades and bugs.
 
-**Twitch**: avatar `twitch/avatar-800.png`, offline banner `twitch/offline-banner-1200x480.png`. Bio: Live games of Pixopoly, the pixel-art property trading game. Come watch someone lose Toronto.
+**Twitch**: avatar `twitch/avatar-800.png`, offline banner `twitch/offline-banner-1200x480.png`. Bio: Live games of Pixonomy, the pixel-art property trading game. Come watch someone lose Toronto.
 
 ## Logos
 
@@ -104,14 +104,14 @@ Each has an Instagram caption and a shorter one for X. Pictures are in `instagra
 **Instagram**
 Forty tiles. Two dice. Zero mercy.
 
-Pixopoly is a pixel-art property trading game for 2 to 6 players: online, on your network, or one mouse passed around the couch.
+Pixonomy is a pixel-art property trading game for 2 to 6 players: online, on your network, or one mouse passed around the couch.
 
 Coming soon to Steam. The free prototype is playable now (link in bio).
 
 **X**
 Forty tiles. Two dice. Zero mercy.
 
-Pixopoly is coming soon to Steam. The free prototype is playable today: https://intebat.itch.io/pixopoly
+Pixonomy is coming soon to Steam. The free prototype is playable today: https://intebat.itch.io/pixonomy
 
 ### 2. Toronto (`post-02-toronto`)
 
@@ -130,7 +130,7 @@ They'll forgive you. Eventually.
 **Instagram**
 25 pawns, and not one of them is for sale.
 
-Everything in Pixopoly is earned by playing: levels, achievements, games finished. Be a frog. Be a teapot. Be a skateboard with gold dice. Nobody can stop you.
+Everything in Pixonomy is earned by playing: levels, achievements, games finished. Be a frog. Be a teapot. Be a skateboard with gold dice. Nobody can stop you.
 
 Which one are you?
 
@@ -173,7 +173,7 @@ Pawns, dice, table cloths and titles, all unlocked by playing. There is no shop 
 **Instagram**
 22 cities. All of them for sale.
 
-Every property in Pixopoly is a real place, drawn in pixels: the pyramids at sunset, the Blue Mosque at dusk, Tokyo Tower under Fuji. Click a deed and the city comes alive: clouds drift, harbour lights move, windows flicker.
+Every property in Pixonomy is a real place, drawn in pixels: the pyramids at sunset, the Blue Mosque at dusk, Tokyo Tower under Fuji. Click a deed and the city comes alive: clouds drift, harbour lights move, windows flicker.
 
 Which one are you buying first?
 
@@ -204,7 +204,7 @@ Use these on their own, or over any screenshot.
 
 Describe what's in the picture, plainly. For example:
 
-- Announcement: "The Pixopoly logo in gold pixel letters, with a red die for the first O, over a night-time city skyline. Six pawns stand along the street: a frog, a chess pawn, a teapot, a robot, a cat and a skateboard."
+- Announcement: "The Pixonomy logo in gold pixel letters, with a red die for the first O, over a night-time city skyline. Six pawns stand along the street: a frog, a chess pawn, a teapot, a robot, a cat and a skateboard."
 - Chaos: "A pink stamp reading EARTHQUAKE under the words Round 7, with shocked and angry emoji faces."
 
 ## Hashtags

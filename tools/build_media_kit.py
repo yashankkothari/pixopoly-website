@@ -15,7 +15,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(HERE)
 IMG = os.path.join(SITE, "assets", "img")
 SHOTS = os.path.join(SITE, "assets", "shots")
-RAW = os.environ.get("PIXOPOLY_RAW", "F:/Untitled Game/webraw")
+RAW = os.environ.get("PIXONOMY_RAW", "F:/Untitled Game/webraw")
 OUT = os.path.join(SITE, "media-kit")
 FONT = os.path.join(SITE, "assets", "fonts", "PixelOperator-Bold.ttf")
 
@@ -134,9 +134,9 @@ def tag(img, xy, s, size=32, fill=COPPER, ink=INK, center=False):
 
 
 def logo(img, cx, y, k=1, die=5):
-    """PIX(die)POLY centred on cx. k scales the letters (they're 116x146 at 1)."""
+    """PIX(die)NOMY centred on cx. k scales the letters (they're 116x146 at 1)."""
     parts = []
-    for ch in "PIX*POLY":
+    for ch in "PIX*NOMY":
         p = Image.open(f"{RAW}/die_{die}.png").convert("RGBA") if ch == "*" else load(f"logo_{ch}.png")
         parts.append(up(p, k) if k > 1 else p)
     gap = 4 * k
@@ -172,7 +172,7 @@ def footer(img, soon="COMING SOON TO STEAM"):
     d.rectangle((0, h - 92, w, h), fill=WALNUT)
     d.rectangle((0, h - 100, w, h - 92), fill=RIM)
     d.rectangle((0, h - 108, w, h - 100), fill=INK)
-    text(d, (40, h - 74), "PIXOPOLY", 48, GOLD)
+    text(d, (40, h - 74), "PIXONOMY", 48, GOLD)
     text(d, (w - 40, h - 66), soon, 32, PARCH, anchor="ra")
 
 
@@ -355,16 +355,16 @@ def avatar(px, name):
 
 # ─── Logos ────────────────────────────────────────────────────────────────────
 
-GAME = os.environ.get("PIXOPOLY_GAME", "F:/Untitled Game/untitled-card-game")
+GAME = os.environ.get("PIXONOMY_GAME", "F:/Untitled Game/untitled-card-game")
 FELT = (42, 143, 138)
 
 
 def logo_parts(die=5):
-    return [Image.open(f"{RAW}/die_{die}.png").convert("RGBA") if ch == "*" else load(f"logo_{ch}.png") for ch in "PIX*POLY"]
+    return [Image.open(f"{RAW}/die_{die}.png").convert("RGBA") if ch == "*" else load(f"logo_{ch}.png") for ch in "PIX*NOMY"]
 
 
 def wordmark(k=1, shadow=True, mono=None, gap=4):
-    """The logo on its own, transparent: PIX(die)POLY. mono = one flat colour
+    """The logo on its own, transparent: PIX(die)NOMY. mono = one flat colour
     (for stamping over photos or printing)."""
     parts = [up(p, k) if k > 1 else p for p in logo_parts()]
     g = gap * k
@@ -399,7 +399,7 @@ def wordmark(k=1, shadow=True, mono=None, gap=4):
 
 
 def stacked(k=1, shadow=True):
-    """PIX(die) over POLY: for square spaces."""
+    """PIX(die) over NOMY: for square spaces."""
     parts = [up(p, k) if k > 1 else p for p in logo_parts()]
     top, bottom = parts[:4], parts[4:]
     g = 4 * k
@@ -591,7 +591,7 @@ def main():
     socials()   # (also the X header)
 
     # One download for the press page.
-    zpath = os.path.join(OUT, "pixopoly-media-kit.zip")
+    zpath = os.path.join(OUT, "pixonomy-media-kit.zip")
     if os.path.exists(zpath):
         os.remove(zpath)
     with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:

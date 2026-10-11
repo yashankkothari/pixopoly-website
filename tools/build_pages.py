@@ -22,7 +22,7 @@ def head(title, desc):
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="/" aria-label="Pixopoly home">PIXOPOLY</a>
+  <a class="brand" href="/" aria-label="Pixonomy home">PIXONOMY</a>
   <nav aria-label="Pages">
     <a href="/">Home</a>
     <a href="/presskit">Press kit</a>
@@ -35,14 +35,14 @@ def head(title, desc):
 
 FOOT = """
 <footer class="foot">
-  <span class="brand">PIXOPOLY</span>
+  <span class="brand">PIXONOMY</span>
   <nav aria-label="More">
     <a href="/">Home</a>
     <a href="/presskit">Press kit</a>
     <a href="/privacy">Privacy</a>
-    <a data-link="itch" href="https://intebat.itch.io/pixopoly" rel="noopener">itch.io</a>
+    <a data-link="itch" href="https://intebat.itch.io/pixonomy" rel="noopener">itch.io</a>
   </nav>
-  <small>&copy; <span id="year">2026</span> Pixopoly. Pixopoly is an independent game. It is not affiliated with, sponsored by or endorsed by Hasbro or the MONOPOLY brand. Steam and the Steam logo are trademarks of Valve Corporation.</small>
+  <small>&copy; <span id="year">2026</span> Pixonomy. Pixonomy is an independent game. It is not affiliated with, sponsored by or endorsed by Hasbro or the MONOPOLY brand. Steam and the Steam logo are trademarks of Valve Corporation.</small>
 </footer>
 <script src="/js/main.js" defer></script>
 </body>
@@ -62,15 +62,15 @@ def main():
         f'    <a class="shot" href="/assets/shots/{s}.webp" download>'
         f'<img src="/assets/shots/{s}_s.webp" alt="Screenshot: {s.replace("_", " ")}" width="960" height="540" loading="lazy"></a>'
         for s in SHOTS)
-    write("presskit.html", head("Pixopoly press kit", "Facts, descriptions, screenshots and art for writing about Pixopoly.") + f"""
+    write("presskit.html", head("Pixonomy press kit", "Facts, descriptions, screenshots and art for writing about Pixonomy.") + f"""
 <main class="page">
   <h1>Press kit</h1>
-  <p>Everything you need to write about Pixopoly. Use any of it. Screenshots are 1920 x 1080; click one to download it.</p>
+  <p>Everything you need to write about Pixonomy. Use any of it. Screenshots are 1920 x 1080; click one to download it.</p>
 
   <section class="panel">
     <h2>Fact sheet</h2>
     <table>
-      <tr><td>Game</td><td>Pixopoly</td></tr>
+      <tr><td>Game</td><td>Pixonomy</td></tr>
       <tr><td>Genre</td><td>Board game, strategy, party</td></tr>
       <tr><td>Players</td><td>2 to 6, any mix of people and CPUs (Easy, Normal, Hard)</td></tr>
       <tr><td>Modes</td><td>Online (Steam), on your network, hot-seat on one PC, 2 v 2 teams</td></tr>
@@ -78,16 +78,16 @@ def main():
       <tr><td>Release</td><td>Coming soon. No date announced.</td></tr>
       <tr><td>Price</td><td>To be announced</td></tr>
       <tr><td>Input</td><td>Mouse, keyboard, controller</td></tr>
-      <tr><td>Prototype</td><td><a data-link="itch" href="https://intebat.itch.io/pixopoly" rel="noopener">Free build on itch.io</a></td></tr>
+      <tr><td>Prototype</td><td><a data-link="itch" href="https://intebat.itch.io/pixonomy" rel="noopener">Free build on itch.io</a></td></tr>
     </table>
   </section>
 
   <h2>One line</h2>
   <p>Buy the world. Bankrupt your friends.</p>
   <h2>One paragraph</h2>
-  <p>Pixopoly is a pixel-art property trading board game for 2 to 6 players. Roll, buy, build and bankrupt your friends online, on your network or on one PC, with ability cards, chaos events and 2 v 2 teams on top of the rules everyone already knows.</p>
+  <p>Pixonomy is a pixel-art property trading board game for 2 to 6 players. Roll, buy, build and bankrupt your friends online, on your network or on one PC, with ability cards, chaos events and 2 v 2 teams on top of the rules everyone already knows.</p>
   <h2>The long version</h2>
-  <p>Pixopoly takes the property trading board game everyone knows and rebuilds it as a fast, readable pixel-art game. The core is familiar: roll the dice, buy what you land on, complete colour sets, build houses and hotels, and collect rent until everyone else is broke. Properties you pass on go to auction, and anything can be traded.</p>
+  <p>Pixonomy takes the property trading board game everyone knows and rebuilds it as a fast, readable pixel-art game. The core is familiar: roll the dice, buy what you land on, complete colour sets, build houses and hotels, and collect rent until everyone else is broke. Properties you pass on go to auction, and anything can be traded.</p>
   <p>On top of that sits a sheet of house rules. Ability cards let you roll again, block a rent payment, halve a rival's income or take a house off their property. Chaos Mode draws a table-wide event every round, from market crashes to earthquakes. Four players can split into two teams that share colour sets and bail each other out.</p>
   <p>The table itself changes as you play: a town fills in around the board, a skyline rises as day turns to night, or a space station is assembled module by module. Pawns, dice, table cloths and titles unlock through play, levels and 54 achievements. There is no shop.</p>
 
@@ -110,14 +110,14 @@ def main():
   </div>
 
   <h2>Logo, key art and social pictures</h2>
-  <p><a href="/assets/img/og.png" download>Key art (1200 x 630)</a>. Scale pixel art up by whole numbers with nearest-neighbour filtering. Logos, ready-made posts, profile pictures and banners for Instagram, X, YouTube, Discord, Facebook, TikTok, Reddit and Twitch, and the words to go with them, are in the <a href="/media-kit/pixopoly-media-kit.zip" download>media kit (zip)</a>.</p>
+  <p><a href="/assets/img/og.png" download>Key art (1200 x 630)</a>. Scale pixel art up by whole numbers with nearest-neighbour filtering. Logos, ready-made posts, profile pictures and banners for Instagram, X, YouTube, Discord, Facebook, TikTok, Reddit and Twitch, and the words to go with them, are in the <a href="/media-kit/pixonomy-media-kit.zip" download>media kit (zip)</a>.</p>
 
   <h2>Credits</h2>
   <p>Font: Pixel Operator by Jayvee Enaguas, released under CC0.</p>
 </main>
 """ + FOOT)
 
-    write("privacy.html", head("Pixopoly privacy", "What this website and the game do with your data: very little.") + """
+    write("privacy.html", head("Pixonomy privacy", "What this website and the game do with your data: very little.") + """
 <main class="page">
   <h1>Privacy</h1>
   <p>Last updated: 7 October 2026.</p>
@@ -133,7 +133,7 @@ def main():
 </main>
 """ + FOOT)
 
-    write("404.html", head("Pixopoly: nothing here", "This page doesn't exist.") + """
+    write("404.html", head("Pixonomy: nothing here", "This page doesn't exist.") + """
 <main class="page" style="justify-items:center;text-align:center">
   <img src="/assets/img/die_1.png" alt="" width="134" height="134">
   <h1>You rolled a one.</h1>
