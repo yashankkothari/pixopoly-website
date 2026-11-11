@@ -1,7 +1,7 @@
 {
   "name": "Pixonomy",
   "short_name": "Pixonomy",
-  "description": "A pixel-art property trading board game. Coming soon to Steam.",
+  "description": "A pixel-art property trading board game for 2 to 6 players. Free prototype on itch.io, coming to Steam.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#171a2e",
