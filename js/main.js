@@ -5,7 +5,6 @@
   // ─── Edit these when the pages exist ───────────────────────────────────────
   const CONFIG = {
     steam: "",                                   // e.g. "https://store.steampowered.com/app/1234567/Pixonomy/"
-    itch: "https://intebat.itch.io/pixonomy",
   };
 
   const $ = (q, el = document) => el.querySelector(q);

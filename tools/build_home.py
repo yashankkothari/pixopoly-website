@@ -6,11 +6,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 SITE = "https://pixopoly-website.vercel.app"
 URL = SITE + "/"
-ITCH = "https://intebat.itch.io/pixonomy"
 
 DESC = ("Pixonomy is a pixel-art property trading board game for 2 to 6 players on PC. Roll the dice, buy cities, "
         "build houses and hotels, collect rent, trade and bid at auction until one tycoon is left. "
-        "Play online with Steam friends, over LAN, on one PC or against CPU rivals. The prototype is free on itch.io.")
+        "Play online with Steam friends, over LAN, on one PC or against CPU rivals. Coming to Steam.")
 
 FAQ = [
     ("What kind of game is Pixonomy?",
@@ -19,8 +18,8 @@ FAQ = [
      "Yes: online with Steam friends, over LAN, or on one PC. CPU players can fill any seat."),
     ("How many players?",
      "2 to 6, people or CPU."),
-    ("Is it free?",
-     "The prototype is free on itch.io now. The full game is coming to Steam."),
+    ("Where can I get it?",
+     "Only on Steam, for Windows PC. Wishlist it to hear on launch day."),
     ("When does it come out?",
      "No date yet. Wishlist it on Steam to hear on launch day."),
 ]
@@ -37,15 +36,13 @@ LD = [
      "trailer": {"@type": "VideoObject", "name": "Pixonomy teaser", "description": "Dice, pawns and houses on the Pixonomy board.",
                  "contentUrl": SITE + "/assets/video/reel.mp4", "thumbnailUrl": SITE + "/assets/video/teaser_poster.jpg",
                  "uploadDate": "2026-11-11"},
-     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": ITCH, "name": "Free prototype on itch.io",
-                "availability": "https://schema.org/InStock"},
      "genre": ["Board game", "Strategy", "Party", "Trading", "Economic simulation"],
      "keywords": "property trading board game, board game online with friends, dice board game, real estate board game, "
                  "pixel art board game, local multiplayer board game, hot-seat board game, tycoon board game, family board game",
      "gamePlatform": ["PC", "Windows", "Steam"], "operatingSystem": "Windows",
      "applicationCategory": "Game", "playMode": ["SinglePlayer", "MultiPlayer"],
      "numberOfPlayers": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 6},
-     "inLanguage": "en", "sameAs": [ITCH]},
+     "inLanguage": "en"},
     {"@context": "https://schema.org", "@type": "WebSite", "@id": SITE + "/#website", "name": "Pixonomy", "url": URL},
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]},

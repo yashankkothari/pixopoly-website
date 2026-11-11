@@ -6,7 +6,6 @@
   // Same links as js/main.js: fill in steam when the Steam page exists.
   const CONFIG = {
     steam: "",                                   // e.g. "https://store.steampowered.com/app/1234567/Pixonomy/"
-    itch: "https://intebat.itch.io/pixonomy",
   };
 
   // ── Links: until there's a Steam page, the Steam buttons say so and go nowhere ──

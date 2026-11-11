@@ -7,7 +7,6 @@ Things we always say the same way:
 - **Pixonomy** (one word, capital P).
 - "a pixel-art property trading game" (not "Monopoly clone", not "Monopoly-like").
 - "Coming soon to Steam." Until there's a date, there's no date.
-- The free prototype: https://intebat.itch.io/pixonomy
 
 ## Bios
 
@@ -17,7 +16,7 @@ A pixel-art property trading game for 2 to 6 players.
 Coming soon to Steam.
 
 **X (160 characters)**
-A pixel-art property trading game. Buy the world, bankrupt your friends, apologise later. Coming soon to Steam. Free prototype below.
+A pixel-art property trading game. Buy the world, bankrupt your friends, apologise later. Coming soon to Steam.
 
 **One line, anywhere**
 Buy the world. Bankrupt your friends.
@@ -30,8 +29,8 @@ Everything the profile page asks for, ready to paste.
 - **Username**: `@pixonomygame` (or `@playpixonomy` if it's taken)
 - **Category**: Video Game
 - **Profile picture**: `instagram/profile-1080.png` (the die on the felt: it stays whole inside Instagram's circle)
-- **Link**: https://intebat.itch.io/pixonomy (the Steam page once it exists)
-- **Link title**: `Play the free prototype`
+- **Link**: the Steam page, once it exists
+- **Link title**: `Wishlist on Steam`
 
 **Bio, option A (the one to use)**
 Buy the world. Bankrupt your friends. 🎲
@@ -65,7 +64,7 @@ Wishlist on Steam ↓
 
 **YouTube**: channel name `Pixonomy`. Avatar `youtube/avatar-800.png`, banner `youtube/banner-2560x1440.png` (the logo sits inside the part YouTube shows on phones).
 Description:
-Pixonomy is a pixel-art property trading game for 2 to 6 players. Buy cities, build hotels, make deals and bankrupt your friends: online, on your network, or one mouse passed round the couch. Trailers, dev logs and the odd game that ended a friendship. Coming soon to Steam. Free prototype: https://intebat.itch.io/pixonomy
+Pixonomy is a pixel-art property trading game for 2 to 6 players. Buy cities, build hotels, make deals and bankrupt your friends: online, on your network, or one mouse passed round the couch. Trailers, dev logs and the odd game that ended a friendship. Coming soon to Steam.
 
 **Discord**: server name `Pixonomy`. Icon `discord/server-icon-512.png`, banner `discord/banner-960x540.png`, invite background `discord/invite-splash-1920x1080.png`.
 Server description: The table for Pixonomy players. Find a game, share your worst trades, report bugs and vote on what we build next.
@@ -106,12 +105,12 @@ Forty tiles. Two dice. Zero mercy.
 
 Pixonomy is a pixel-art property trading game for 2 to 6 players: online, on your network, or one mouse passed around the couch.
 
-Coming soon to Steam. The free prototype is playable now (link in bio).
+Coming soon to Steam. Wishlist link in bio.
 
 **X**
 Forty tiles. Two dice. Zero mercy.
 
-Pixonomy is coming soon to Steam. The free prototype is playable today: https://intebat.itch.io/pixonomy
+Pixonomy is coming soon to Steam.
 
 ### 2. Toronto (`post-02-toronto`)
 
@@ -184,7 +183,7 @@ Buy Paris. Build on Tokyo. Charge rent in Rio.
 
 ### Stories
 
-- `story-01-announce`: no caption needed. Add a link sticker to the itch page (or the Steam page once it exists).
+- `story-01-announce`: no caption needed. Add a link sticker to the Steam page once it exists.
 - `story-02-house-rules`: add a poll sticker: "Who flips the board in your house?" with two names.
 
 ## More lines, for whenever

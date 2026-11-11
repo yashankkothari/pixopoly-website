@@ -40,7 +40,6 @@ FOOT = """
     <a href="/">Home</a>
     <a href="/presskit">Press kit</a>
     <a href="/privacy">Privacy</a>
-    <a data-link="itch" href="https://intebat.itch.io/pixonomy" rel="noopener">itch.io</a>
   </nav>
   <small>&copy; <span id="year">2026</span> Pixonomy. Pixonomy is an independent game. It is not affiliated with, sponsored by or endorsed by Hasbro or the MONOPOLY brand. Steam and the Steam logo are trademarks of Valve Corporation.</small>
 </footer>
@@ -78,7 +77,6 @@ def main():
       <tr><td>Release</td><td>Coming soon. No date announced.</td></tr>
       <tr><td>Price</td><td>To be announced</td></tr>
       <tr><td>Input</td><td>Mouse, keyboard, controller</td></tr>
-      <tr><td>Prototype</td><td><a data-link="itch" href="https://intebat.itch.io/pixonomy" rel="noopener">Free build on itch.io</a></td></tr>
     </table>
   </section>
 
@@ -125,7 +123,7 @@ def main():
   <p>This site sets no cookies, runs no analytics or advertising scripts, and has no forms. Fonts, images and scripts are served from this site, not from third parties.</p>
   <p>The company that hosts the site may keep standard server logs (such as IP address, browser type and time of request) to run and protect the service.</p>
   <h2>Links to other sites</h2>
-  <p>Links to Steam, itch.io and other services take you to sites with their own privacy policies.</p>
+  <p>Links to Steam and other services take you to sites with their own privacy policies.</p>
   <h2>The game</h2>
   <p>The game stores your settings, saves and unlocks on your own computer. Online play uses Steam's networking and is covered by Valve's privacy policy. Network play sends data only between the computers in the game.</p>
   <h2>Changes</h2>

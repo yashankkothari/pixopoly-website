@@ -306,6 +306,7 @@ section { scroll-margin-top: 90px; }
 
 /* ── This site: store buttons, the screenshot row, the teaser ── */
 .btn.is-soon { --fill: #4a4e6e; --edge: #2c2f48; --hi: #6b7096; color: #c9c3d8; cursor: default; filter: none; transform: none; }
+.btn--big.is-soon { font-size: 32px; padding: 12px 22px 18px; }
 .foot a.is-soon { color: var(--muted); text-decoration: none; cursor: default; }
 .shot a { display: block; }
 .shots3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
