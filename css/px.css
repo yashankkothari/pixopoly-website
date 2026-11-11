@@ -146,8 +146,8 @@ p { margin: 0 0 .7em; }
 .die { width: 99px; height: 99px; background: url("/assets/px/dice.png") no-repeat; background-size: calc(1188px * 1.5) 99px; background-position: calc(var(--d, 12) * -99px) 0; image-rendering: pixelated; filter: drop-shadow(0 4px 0 rgba(20, 16, 26, .55)); }
 .landed { width: 100%; display: grid; grid-template-columns: 66px 1fr; gap: 0 12px; padding: 10px 12px 14px; align-items: center; min-height: 92px; }
 .landed__art { width: 66px; height: 66px; background: url("/assets/px/tiles.png") no-repeat; background-size: calc(3168px * .75) 66px; background-position: calc(var(--t, 3) * -66px) 0; image-rendering: pixelated; box-shadow: 0 0 0 2px var(--ink); }
-.landed b { display: block; font: 32px/1.5 "PxHead"; }
-.landed span { display: block; font-size: 16px; line-height: 1.3; color: #4a2c26; }
+.landed b { display: block; font: 24px/1.4 "PxHead"; margin-bottom: 2px; }
+.landed span { display: block; margin-top: 4px; font-size: 16px; line-height: 1.3; color: #4a2c26; }
 .landed .tag { display: inline-block; height: 10px; width: 22px; margin-right: 6px; background: var(--c); box-shadow: 0 0 0 2px var(--ink); vertical-align: 1px; }
 .roll-hint { font: 16px/1.5 "PxHead"; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); text-shadow: 0 2px 0 var(--ink); }
 
@@ -169,14 +169,9 @@ section { scroll-margin-top: 90px; }
 /* How a turn goes: four tiles */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; list-style: none; margin: 0; padding: 0; counter-reset: s; }
 .step { padding: 0 0 18px; display: flex; flex-direction: column; }
-.step .band { background: var(--c); display: flex; justify-content: space-between; align-items: baseline; }
-.step .band small { font: 16px/1 "PxNum"; opacity: .85; }
+.step .band { background: var(--c); }
 .step p { padding: 14px 18px 0; margin: 0; font-size: 22px; line-height: 1.3; }
 .step img { margin: 16px auto 0; width: 66px; }
-.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
-.fact { padding: 14px 16px 20px; text-align: center; }
-.fact .num { display: block; font-size: 48px; line-height: 1.3; color: var(--gold); text-shadow: 0 4px 0 var(--ink); }
-.fact span { display: block; font-size: 20px; color: var(--muted); margin-top: 6px; }
 
 /* Feature deeds: a city in the band, the title, then "rent" lines */
 .deeds { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 36px 28px; }
@@ -184,12 +179,8 @@ section { scroll-margin-top: 90px; }
 .deed__top { border: 3px solid var(--c); background: var(--c); }
 .deed__art { height: 96px; overflow: hidden; }
 .deed__art img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
-.deed__title { text-align: center; font: 32px/1.3 "PxHead"; color: #fff; padding: 4px 6px 5px; text-shadow: 0 3px 0 rgba(20, 16, 26, .5); }
-.deed__kind { text-align: center; font: 16px/1 "PxHead"; letter-spacing: .1em; text-transform: uppercase; color: #7d4a36; margin: 12px 0 6px; }
-.deed p { padding: 0 6px; font-size: 21px; line-height: 1.3; }
-.deed ul { list-style: none; margin: 4px 6px 0; padding: 10px 0 0; border-top: 2px dashed var(--paper-edge); font-size: 20px; line-height: 1.3; }
-.deed li { display: flex; gap: 8px; padding: 2px 0; }
-.deed li::before { content: ""; flex: none; width: 8px; height: 8px; margin-top: 7px; background: var(--c); box-shadow: 0 0 0 2px var(--ink); }
+.deed__title { text-align: center; font: 28px/1.3 "PxHead"; color: #fff; padding: 4px 6px 5px; text-shadow: 0 3px 0 rgba(20, 16, 26, .5); }
+.deed p { padding: 12px 6px 0; margin: 0; font-size: 22px; line-height: 1.3; text-align: center; }
 
 /* Play with friends */
 .modes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
@@ -205,10 +196,9 @@ section { scroll-margin-top: 90px; }
 
 /* Boards */
 .maps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
-.map { padding: 10px 10px 16px; }
+.map { margin: 0; padding: 10px 10px 16px; }
 .map img { image-rendering: auto; width: 100%; aspect-ratio: 1; }
-.map h3 { margin: 14px 4px 6px; font-size: 24px; color: var(--ink); }
-.map p { margin: 0 4px; font-size: 20px; line-height: 1.3; color: #7d4a36; }
+.map h3 { margin: 10px 4px 0; font-size: 24px; color: var(--ink); text-align: center; }
 .tilt { margin-top: 56px; padding: 12px; }
 .tilt img { image-rendering: auto; width: 100%; }
 
@@ -219,8 +209,7 @@ section { scroll-margin-top: 90px; }
 .rulebox ul { list-style: none; margin: 0; padding: 8px 18px; }
 .rulebox li { display: grid; grid-template-columns: 1fr auto; gap: 4px 14px; align-items: center; padding: 10px 0; border-bottom: 2px solid var(--slate-l); font-size: 22px; line-height: 1.3; }
 .rulebox li:last-child { border-bottom: 0; }
-.rulebox li small { grid-column: 1; color: var(--muted); font-size: 18px; }
-.rulebox li em { grid-row: 1 / span 2; grid-column: 2; font: 16px/1 "PxNum"; font-style: normal; padding: 7px 9px 6px; background: var(--slate-d); color: var(--paper); box-shadow: 0 0 0 2px var(--ink); white-space: nowrap; }
+.rulebox li em { font: 16px/1 "PxNum"; font-style: normal; padding: 7px 9px 6px; background: var(--slate-d); color: var(--paper); box-shadow: 0 0 0 2px var(--ink); white-space: nowrap; }
 .rulebox li em.on { background: #3c9a4a; color: #fff; }
 .presets { display: grid; gap: 22px; }
 .preset { padding: 14px 18px 20px; }
@@ -291,10 +280,15 @@ section { scroll-margin-top: 90px; }
 }
 @media (max-width: 620px) {
   body { font-size: 22px; }
-  .steps, .modes, .maps, .more, .facts { grid-template-columns: minmax(0, 1fr); }
-  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .fact .num { font-size: 24px; }
-  .band { font-size: 28px; overflow-wrap: anywhere; }
+  .steps, .modes, .maps, .more { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .hero__cta .btn { font-size: 22px; white-space: nowrap; }
+  .more { grid-template-columns: minmax(0, 1fr); }
+  .map h3 { font-size: 20px; }
+  .band { font-size: 20px; padding: 8px 10px 10px; }
+  .step p, .mode p, .more p { padding: 10px 12px 0; font-size: 20px; }
+  .deeds { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .deed__title { font-size: 17px; padding-inline: 2px; }
+  .deed p { font-size: 20px; }
   .hud__logo img { width: 121px; }
   .btn--big { font-size: 32px; padding: 8px 22px 16px; }
   .hero h1 .sub { font-size: 24px; }
@@ -303,7 +297,7 @@ section { scroll-margin-top: 90px; }
   .roller { width: 84%; gap: 6px; }
   .landed { grid-template-columns: 44px 1fr; min-height: 0; padding: 6px 8px 10px; }
   .landed__art { width: 44px; height: 44px; background-size: calc(3168px * .5) 44px; background-position: calc(var(--t, 3) * -44px) 0; }
-  .landed b { font-size: 16px; line-height: 1.4; }
+  .landed b { font-size: 20px; line-height: 1.3; }
   .landed span { font-size: 16px; }
   .roll-hint { display: none; }
   .wl-form { grid-template-columns: 1fr; }

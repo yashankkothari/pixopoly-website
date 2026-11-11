@@ -14,36 +14,15 @@ DESC = ("Pixonomy is a pixel-art property trading board game for 2 to 6 players 
 
 FAQ = [
     ("What kind of game is Pixonomy?",
-     "Pixonomy is a property trading board game in pixel art. You roll two dice, move round a board of 36 tiles, "
-     "buy the cities you land on, complete colour sets, build houses and hotels, and collect rent from everyone who "
-     "lands on your property. Trade, bid at auctions and bluff your way to the top: the last player with money wins."),
-    ("Can I play Pixonomy online with friends?",
-     "Yes. Invite your Steam friends to play online, host a game on your local network (LAN), or share one PC and "
-     "pass the mouse or controller round. You can fill any empty seat with a CPU player."),
-    ("How many players can play?",
-     "2 to 6 players, in any mix of people and computer players."),
-    ("Can I play alone against the computer?",
-     "Yes. CPU rivals come in Easy, Normal and Hard, and they trade, bid at auctions and build just like people do. "
-     "There's also a daily challenge with the same dice and cards for every player."),
-    ("If I know the classic property board game, will I know how to play?",
-     "Yes. Roll, buy, build, collect rent and bankrupt your rivals: the core loop is the one you know from the kitchen "
-     "table. Pixonomy adds a deal slip with promises and IOUs, auctions, a Bank Loan corner, the Lucky Spin, ability "
-     "cards, Chaos Mode, secret missions, teams and underdog rules, all of which you can switch on or off."),
-    ("How long does a game take?",
-     "You choose. Set a round limit and the richest player wins when the rounds run out, pick the Quick preset for a "
-     "short game, or play the classic way until only one player is left."),
-    ("Does Pixonomy have house rules like auctions and a jackpot?",
-     "Yes. Auctions and even building are on by default. You can also set the starting cash, a round limit, a turn "
-     "timer and a jackpot that pays out on the Lucky Spin, turn on teams, ability cards and Chaos Mode, or add extra "
-     "ways to win by sets, cash or railroads."),
-    ("Can I play Pixonomy for free?",
-     "Yes. A free prototype is on itch.io right now, so you can roll the dice and buy your first city today. "
-     "The full game is coming to Steam."),
-    ("Which platforms is Pixonomy on?",
-     "Pixonomy is coming to Steam for Windows PC. You can play with a mouse, a keyboard or a controller."),
-    ("When does Pixonomy come out?",
-     "Pixonomy is in development and has no release date yet. Wishlist it on Steam and Steam will tell you the day it "
-     "comes out; until then, the free prototype is on itch.io."),
+     "A pixel-art property trading board game. Roll, buy cities, build hotels and collect rent until one player is left."),
+    ("Can I play online with friends?",
+     "Yes: online with Steam friends, over LAN, or on one PC. CPU players can fill any seat."),
+    ("How many players?",
+     "2 to 6, people or CPU."),
+    ("Is it free?",
+     "The prototype is free on itch.io now. The full game is coming to Steam."),
+    ("When does it come out?",
+     "No date yet. Wishlist it on Steam to hear on launch day."),
 ]
 
 PAWNS = ["Cat", "Duck", "Robot", "Ghost", "Dino", "Car", "Frog", "Penguin", "Rocket", "Crown", "Dog",
